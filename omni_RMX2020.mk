@@ -20,13 +20,13 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 LOCAL_PATH := device/realme/RMX2020
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+#$(call inherit-product, vendor/omni/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX2020
