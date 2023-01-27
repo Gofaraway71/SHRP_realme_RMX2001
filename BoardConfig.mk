@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/RMX2020
+DEVICE_PATH := device/realme/RMX2001
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -27,25 +27,25 @@ TARGET_ARCH_VARIANT := armv8-2a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := cortex-a75
+TARGET_CPU_VARIANT_RUNTIME := cortex-a76
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
-TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
 
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := mt6768
+TARGET_BOOTLOADER_BOARD_NAME := mt6785
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Platform
-TARGET_BOARD_PLATFORM := mt6768
+TARGET_BOARD_PLATFORM := mt6785
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user  loop.max_part=70 
@@ -143,18 +143,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
-# Additional binaries & libraries needed for recovery
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libkeymaster4 \
-    libpuresoftkeymasterdevice \
-    ashmemd_aidl_interface-cpp \
-    libashmemd_client
 
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so
     
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
@@ -197,17 +186,17 @@ TARGET_USES_LOGD := true
 
 # NOTE - Dont use '-' or blank spaces in flag values , otherwise it will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC). 
 # Path of your SHRP Tree
-SHRP_PATH := device/realme/RMX2020
+SHRP_PATH := device/realme/RMX2001
 # Maintainer name *
-SHRP_MAINTAINER := sarthakroy2002
+SHRP_MAINTAINER := gofar
 # Device codename *
-SHRP_DEVICE_CODE := RMX2020
+SHRP_DEVICE_CODE := RMX2001
 # Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
 SHRP_REC_TYPE := Treble
 # Recovery Type (It can be A/B or A_only) [Only for About Section] *
 SHRP_DEVICE_TYPE := A_only
 # Official
-SHRP_OFFICIAL := true
+SHRP_OFFICIAL := false
 # Notch
 SHRP_NOTCH := true
 # EDL
@@ -229,7 +218,7 @@ SHRP_DARK := true
 INC_IN_REC_MAGISK := true
 
 #SHRP Addons
-SHRP_EXTERNAL_ADDON_PATH := "device/realme/RMX2020/addon/"
+SHRP_EXTERNAL_ADDON_PATH := "device/realme/RMX2001/addon/"
 SHRP_EXTERNAL_ADDON_1_NAME := "SELinux Permissiver"
 SHRP_EXTERNAL_ADDON_1_INFO := "Makes SELinux Permissive"
 SHRP_EXTERNAL_ADDON_1_FILENAME := "permissiver.zip"
